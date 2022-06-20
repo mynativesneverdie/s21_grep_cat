@@ -1,8 +1,8 @@
 # s21_cat_grep
 
-Development of Bash text utilities: cat, grep.
-
 ![simple_bash_utils](images/bashutils.png)
+
+Development of Bash text utilities: cat, grep.
 
 ## Information
 
