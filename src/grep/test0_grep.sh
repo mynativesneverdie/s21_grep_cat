@@ -7,13 +7,13 @@ REGEX="--regexp=\"[0-9]\+\""
 PATTERN="21"
 FILE_NAME="./s21_grep.c"
 
-for flag_1 in '' -i -v -c -l -n $REGEX
+for flag_1 in '' -i -v -c -l -n -h $REGEX
 do 
-    for flag_2 in '' -i -v -c -l -n $REGEX
+    for flag_2 in '' -i -v -c -l -n -h $REGEX
     do
-        for flag_3 in '' -i -v -c -l -n $REGEX
+        for flag_3 in '' -i -v -c -l -n -h $REGEX
         do
-            for flag_4 in '' -i -v -c -l -n $REGEX
+            for flag_4 in '' -i -v -c -l -n -h $REGEX
             do
                 if [[ $flag_1 != $flag_2 ]] && [[ $flag_1 != $flag_3 ]] && 
                    [[ $flag_1 != $flag_4 ]] && [[ $flag_2 != $flag_3 ]] && 

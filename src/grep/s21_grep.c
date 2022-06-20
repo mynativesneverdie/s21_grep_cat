@@ -7,7 +7,7 @@ char *pattern = NULL;
 void stdin_parsing(int argc, char *argv[]) {
     int opt;
     int option_index;
-    const char *short_options = "e:ivcln";
+    const char *short_options = "e:ivclnh";
 
     while ((opt = getopt_long(argc, argv, short_options,
                               long_options, &option_index)) != -1) {
@@ -36,6 +36,9 @@ void stdin_parsing(int argc, char *argv[]) {
                 break;
             case 'n':
                 flag |= FLAG_LINE_NUMBER;
+                break;
+            case 'h':
+                flag |= FLAG_NO_FILENAME;
                 break;
             default:  /* ? */
                 printf("found unknown option\n");
@@ -152,7 +155,7 @@ void return_text(char *string, struct string_node *list[],
     char *match_str = NULL;
     char *ret = NULL;
 
-    if (control == PRINT_FILE) {
+    if (control == PRINT_FILE && !(flag & FLAG_NO_FILENAME)) {
         printf("%s:", path);
     }
 

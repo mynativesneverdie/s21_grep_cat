@@ -16,6 +16,7 @@
 #define FLAG_FILE_WITH_MATCHES    (1U << 4U)
 #define FLAG_LINE_NUMBER          (1U << 5U)
 #define FLAG_LAST_CHAR            (1U << 6U)
+#define FLAG_NO_FILENAME          (1U << 7U)
 
 struct option long_options[] = {
         { "regexp", required_argument, NULL, 'e' },
@@ -24,6 +25,7 @@ struct option long_options[] = {
         { "count", no_argument, NULL, 'c' },
         { "files-with-matches", no_argument, NULL, 'l' },
         { "line-number", no_argument, NULL, 'n' },
+        { "no-filename", no_argument, NULL, 'h' },
         { NULL, 0, NULL, 0 }
 };
 
